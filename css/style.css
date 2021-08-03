@@ -9,7 +9,7 @@
 
 
 html{
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 
 ::selection{
@@ -167,11 +167,12 @@ html{
   transition: .2s linear;
 }
 
-.home .buttons a:hover
+.home .buttons a:hover , .home .buttons a:active
 {
   background-color: #f1f1f1;
   color: rgb(12, 12, 12);
-  border: 1px solid var(--dark-cinza);;
+  border: 1px solid var(--dark-cinza);
+  text-decoration: underline;
 }
 
 section{
@@ -187,6 +188,8 @@ section{
   font-size: 32px;
   padding-bottom: 20px;
   color: #111;
+  text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
 }
 
 .content{
@@ -352,8 +355,10 @@ section.dark .section-title::after{
   width: 50%;
 }
 
-.gallery img:hover{
+.gallery img:hover , .gallery img:active{
   opacity:50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; 
+  border: 2px #303031 solid;
 }
 
 
