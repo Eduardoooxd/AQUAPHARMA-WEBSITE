@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 *{
   margin: 0;
@@ -181,7 +182,8 @@ section{
 }
 
 .section-title{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Lato', sans-serif;
+font-weight: lighter;
   text-align: center;
   margin-bottom: 40px;
   position: relative;
@@ -314,7 +316,8 @@ section.dark .section-title::after{
 
 #produtos .section-title{
   font-size: 32px;
-  font-weight: 500;
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
 }
 
 
@@ -332,6 +335,9 @@ section.dark .section-title::after{
 
 #produtos .produtos-title{
   color:#1589FF;
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+  margin: 1.5rem 0;
 }
 
 
@@ -339,6 +345,9 @@ section.dark .section-title::after{
 
 #bem-estar .produtos-title{
   color:rgb(190, 66, 66);
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+  margin: 1.5rem 0;
 }
 
 
@@ -357,8 +366,7 @@ section.dark .section-title::after{
 
 .gallery img:hover , .gallery img:active{
   opacity:50%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; 
-  border: 2px #303031 solid;
+  
 }
 
 
@@ -368,6 +376,8 @@ section.dark .section-title::after{
   text-align: center;
   font-size: 30px;
   color: #303031;
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
 }
 
 .gallery img{
@@ -388,9 +398,7 @@ section.dark .section-title::after{
 
 .grid{
   width: 100%;
-  
   margin: auto;
-
 }
 
 
@@ -674,8 +682,8 @@ footer .sm a:hover{
 
   .gallery img {
     display: block;
-    width: 55vh;
-    height: 35vh;
+    width: 50%;
+    height:min-content;
     margin: 0 auto;
   }
 
