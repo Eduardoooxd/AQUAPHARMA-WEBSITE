@@ -90,9 +90,6 @@
   transition: .2s linear;
 }
 
-.navbar-menu a:hover{
-  color: #48dbfb !important;
-}
 
 .sticky{
   background-color:  #fff;
