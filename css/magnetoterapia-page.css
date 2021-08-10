@@ -110,6 +110,10 @@ color:#222 ;
 }
 
 
+.sticky .navbar-menu a{
+  color: #222;
+}
+
 .sticky .menu-toggler span{
 background-color: #111;
 }

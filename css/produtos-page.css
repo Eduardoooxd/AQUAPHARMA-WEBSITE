@@ -9,6 +9,10 @@
     color: var(--light-blue)!important;
   }
 
+  .sticky .navbar-menu a{
+    color: #222;
+  }
+
 
 @media screen and (min-width: 1024px){
 
