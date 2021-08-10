@@ -100,9 +100,12 @@ padding: 18px 0;
 .sticky .logo{
 color:#222 ;
 }
+.navbar-menu a:hover{
+  color: var(--light-blue) !important;
+}
 
-.sticky .navbar-menu a{
-color: #222;
+.sticky .navbar-menu a:hover{
+  color: var(--light-blue)!important;
 }
 
 

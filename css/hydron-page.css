@@ -103,7 +103,13 @@
 .sticky .navbar-menu a{
   color: #222;
 }
+.navbar-menu a:hover{
+  color: var(--light-blue) !important;
+}
 
+.sticky .navbar-menu a:hover{
+  color: var(--light-blue)!important;
+}
 
 .sticky .menu-toggler span{
   background-color: #111;

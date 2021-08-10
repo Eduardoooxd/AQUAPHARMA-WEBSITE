@@ -90,6 +90,9 @@ margin-left: 30px;
 transition: .2s linear;
 }
 
+.navbar-menu a:hover{
+color: var(-) !important;
+}
 
 .sticky{
 background-color:  #fff;
@@ -100,8 +103,12 @@ padding: 18px 0;
 color:#222 ;
 }
 
-.sticky .navbar-menu a{
-color: #222;
+.navbar-menu a:hover{
+  color: var(--light-blue) !important;
+}
+
+.sticky .navbar-menu a:hover{
+  color: var(--light-blue)!important;
 }
 
 

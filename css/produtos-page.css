@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-
+.navbar-menu a:hover{
+    color: var(--light-blue) !important;
+  }
+  
+  .sticky .navbar-menu a:hover{
+    color: var(--light-blue)!important;
+  }
 
 
 @media screen and (min-width: 1024px){
