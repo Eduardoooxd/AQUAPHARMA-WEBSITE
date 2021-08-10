@@ -35,8 +35,29 @@ html{
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
-	background: url(/images/logo.png) center no-repeat #fff;
+  background:center no-repeat #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
+
+
+.se-pre-con .loader{
+  border: 2px solid #f3f3f3; /* Light grey */
+  border-top: 2px solid var(--light-blue); /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1.5s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 .navbar{
   position: fixed;
@@ -63,8 +84,8 @@ html{
 
 .logo-pic{
   margin-left: 27%;
-  width: 115px;
-  height: 100%;
+  width: 57%;
+  height: auto;
 }
 
 
@@ -122,9 +143,11 @@ html{
 .home{
   height: 100vh;
   min-height: 500px;
-  background-image: url("../images/fundo-3.jpg") ;
+  
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: url("../images/fundo-4.jpg")  ;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center center;
   background-size: cover;
   background-attachment: scroll;
 }
@@ -177,16 +200,18 @@ html{
   font-size: 18px;
   font-weight: 200;
   width: 180px;
-  border: 1px solid var(--light-blue);;
+  border: 1px solid var(--light-white);;
   padding: 14px 0;
-  border-radius: 6px;
+  border-radius: 50px;
   transition: .2s linear;
+  background-color: #1acbf3;
+  
 }
 
 .home .buttons a:hover , .home .buttons a:active
 {
   background-color: transparent;
- 
+  border-radius: 0;
   text-decoration: underline;
 }
 
@@ -270,20 +295,20 @@ font-weight: lighter;
 
 .carousel-actions button{
   border:0;
-  border-radius: 50px;
+  opacity: 0.65;
   font-weight: 400;
   font-size: 16px;
   cursor: pointer;
   width: 30px;
   height: 30px;
+  color: var(--light-white);
   transition: 1s ease-in-out;
-  background-color: #fff;
+  background-color: var(--dark-cinza);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }
 
 .carousel-actions button:hover{
- background-color: #ddd;
- color:black ;
+ opacity: 1;
 }
 
 .carousel-actions button#carousel-button-previous{
@@ -467,8 +492,7 @@ section.dark .section-title::after{
 }
 
 .gallery img:hover , .gallery img:active{
-  opacity:50%;
-  
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 
@@ -546,7 +570,7 @@ padding: 40px 40px;
   box-shadow: 0 0 10px 4px #34495e;
 }
 
-textarea.contact-form-text{
+textarea .contact-form-text{
   resize: none;
   height: 120px;
 }
@@ -802,6 +826,10 @@ footer .sm a:hover{
 
 @media screen and (max-width: 680px){
   
+  .logo-pic{
+    margin-left:10%;
+  }
+
   .gallery {
     display: block;
   }
@@ -879,4 +907,40 @@ footer .sm a:hover{
  
 
 
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

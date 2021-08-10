@@ -1,9 +1,12 @@
  // smooth scrool 
 
-$(window).load(function() {
+ 
+$(document).ready(function() {
   // Animate loader off screen
   $(".se-pre-con").fadeOut("slow");;
 });
+
+
 
  $('.navbar-menu a').on('click', function (e) {
    if (this.hash !== '') {
