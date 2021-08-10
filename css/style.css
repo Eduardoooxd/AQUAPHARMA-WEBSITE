@@ -176,6 +176,8 @@ html{
   text-decoration: underline;
 }
 
+
+
 section{
   padding: 50px 0;
   background-color: #fff;
@@ -193,6 +195,90 @@ font-weight: lighter;
   text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
     0px -4px 10px rgba(255,255,255,0.3);
 }
+
+.content-separator{
+  width: 100%;
+  border: solid rgb(248, 248, 248) 1px;
+}
+
+@media screen and (max-width: 1024px){
+  .content-separator{
+    visibility: hidden;
+  }
+}
+
+
+
+
+.carousel{
+  overflow: hidden;
+  max-width:300px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.carousel .carousel-item , 
+.carousel .carousel-item-hidden{
+  display: none;
+}
+
+.carousel-item img {
+  max-width: 300px;
+  width: 100%;
+  height: 190px;
+}
+
+.carousel .carousel-item-visible{
+  display: block;
+  animation: fadeVisibility 2s;
+}
+
+@keyframes fadeVisibility {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+      transform: opacity linear;
+    }
+
+}
+
+.carousel .carousel-actions{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-actions button{
+  border:0;
+  border-radius: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  transition: 1s ease-in-out;
+  background-color: #fff;
+}
+
+.carousel-actions button:hover{
+ background-color: #ddd;
+ color:black ;
+}
+
+.carousel-actions button#carousel-button-previous{
+ margin-left: 3px;
+}
+
+.carousel-actions button#carousel-button-next{
+  margin-right: 3px;
+ }
+
+
 
 .content{
   animation: fadeInAnimation ease-in 1.5s ;

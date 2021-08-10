@@ -41,15 +41,52 @@ $(document).ready(function(){
     $('.menu-toggler').toggleClass("active");
   });
  
+  let slidePosition = 0;
+  const slides = document.querySelectorAll('.carousel-item');
+  const totalSlides = slides.length;
 
+  document.getElementById('carousel-button-next').addEventListener('click',nextSlide);
 
-  // TODO TRABALHAR NISTO 
+  function nextSlide(){
+    if(slidePosition=== totalSlides-1){
+      slidePosition = 0 ;
+    }else{
+      slidePosition++;
+    }
+    updateSlidePosition();
+  }
+
+  document.getElementById('carousel-button-previous').addEventListener('click',function(){
+    
+    if(slidePosition===0){
+      slidePosition = totalSlides-1;
+    }else{
+      slidePosition--;
+    }
+    updateSlidePosition()
+  });
+
+  let myTimer = setInterval(nextSlide,5000);
+
+  function updateSlidePosition(){
+    for(let slide of slides){
+      slide.classList.remove('carousel-item-visible');
+      slide.classList.add('carousel-item-hidden');
+    }
+    slides[slidePosition].classList.add('carousel-item-visible');
+    clearInterval(myTimer);
+    myTimer = setInterval(nextSlide,5000);
+  }
+
+  
+
+  
 
 });
 
 
 
 
-// smooth scrool
+
 
 
