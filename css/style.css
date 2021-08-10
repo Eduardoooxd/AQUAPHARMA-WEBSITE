@@ -85,7 +85,7 @@ html{
 }
 
 .navbar-menu a:hover{
-  color: var(--dark-cinza) !important;
+  color: var(--light-blue) !important;
 }
 
 .sticky{
@@ -173,9 +173,8 @@ html{
 
 .home .buttons a:hover , .home .buttons a:active
 {
-  background-color: #f1f1f1;
-  color: rgb(12, 12, 12);
-  border: 1px solid var(--dark-cinza);
+  background-color: transparent;
+ 
   text-decoration: underline;
 }
 
@@ -473,7 +472,7 @@ section.dark .section-title::after{
 
 .gallery img{
   width:100%;
-  height: 300px;
+  height: auto;
 }
 
 .work{
@@ -731,9 +730,6 @@ footer .sm a:hover{
     width: 100%;
   }
 
-  .gallery img{
-    width:100%;
-  }
 
   .contact-info .item{
     width: 100%;
@@ -768,14 +764,17 @@ footer .sm a:hover{
   }
 
   .gallery {
+    display: flex;
     align-content: center;
+    align-self: center;
+    align-items: center;
   }
 
+
   .gallery img {
-    display: block;
-    width: 50%;
-    height:min-content;
+    width: 80%;
     margin: 0 auto;
+
   }
 
  
@@ -790,7 +789,11 @@ footer .sm a:hover{
 
 
 @media screen and (max-width: 680px){
- 
+  
+  .gallery {
+    display: block;
+  }
+
   .sm a{
     margin: 0 20px;
   }
@@ -851,7 +854,7 @@ footer .sm a:hover{
 
 .gallery img {
   width: 100%;
-  height: 30vh;
+  min-height: 30vh;
   margin: 0 auto;
 }
 
