@@ -110,7 +110,7 @@ html{
 .home{
   height: 100vh;
   min-height: 500px;
-  background-image: url("../images/fundo.jpg") ;
+  background-image: url("../images/fundo-3.jpg") ;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -125,6 +125,9 @@ html{
   text-align: center;
 }
 
+.active-link{
+  color: var(--light-blue) !important;
+}
 
 
 .home .content{
@@ -230,7 +233,8 @@ font-weight: lighter;
 
 .carousel .carousel-item-visible{
   display: block;
-  animation: fadeVisibility 2s;
+  animation: fadeVisibility 4s;
+  transition: all .8s cubic-bezier(0.54, 0.35, 0.29, 0.99);
 }
 
 @keyframes fadeVisibility {
@@ -263,6 +267,7 @@ font-weight: lighter;
   height: 30px;
   transition: 1s ease-in-out;
   background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }
 
 .carousel-actions button:hover{
