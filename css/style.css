@@ -198,7 +198,7 @@ font-weight: lighter;
 
 .content-separator{
   width: 100%;
-  border: solid rgb(248, 248, 248) 1px;
+  border: solid rgb(219, 219, 219) 1px;
 }
 
 @media screen and (max-width: 1024px){
