@@ -240,38 +240,82 @@ font-weight: lighter;
   border: solid rgb(219, 219, 219) 1px;
 }
 
+.item-a { width:200px; }
+.item-b { width:340px; }
+.item-c { width:290px; }
+.item-d { width:220px; }
+.item-e { width:350px; }
+@media (max-width: 768px) {
+    .item-a { width:100px; }
+    .item-b { width:240px; }
+    .item-c { width:190px; }
+    .item-d { width:120px; }
+    .item-e { width:250px; }
+}
+
+
+
+
+.container{
+    width: 100%;
+    height: 23vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.box{
+  width: 100%;
+  height: 180px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box-image{
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
 @media screen and (max-width: 1024px){
   .content-separator{
     visibility: hidden;
   }
+
+  .container{
+    height: 18vh;
+  }
+
+  .box-image{
+    height: 80%;
+    max-height: 80%;
+  }
+
 }
 
 
 
 
-.carousel{
-  overflow: hidden;
-  max-width:300px;
-  position: relative;
-  margin: 0 auto;
+@media screen and (max-width: 680px){
+  .container{
+    height: 30vh;
+  }
+
+  .box-image{
+    height: 100%;
+    
+  }
 }
 
-.carousel .carousel-item , 
-.carousel .carousel-item-hidden{
-  display: none;
-}
 
-.carousel-item img {
-  max-width: 300px;
-  width: 100%;
-  height: 190px;
-}
-
-.carousel .carousel-item-visible{
-  display: block;
-  animation: fadeVisibility 4s;
-  transition: all .8s cubic-bezier(0.54, 0.35, 0.29, 0.99);
-}
 
 @keyframes fadeVisibility {
     from{
