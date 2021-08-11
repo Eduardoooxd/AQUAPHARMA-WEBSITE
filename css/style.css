@@ -485,55 +485,53 @@ section.dark .section-title::after{
   border: 4px solid #353b48;
 }
 
-#produtos .section-title{
+.section-title{
   font-size: 32px;
   font-family: 'Lato', sans-serif;
   font-weight: lighter;
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+
 .produtos-title{
+  font-family: 'Poppins', sans-serif;
   font-size: 28px;
-  margin: 50px 0;
-  font-weight: 400;
+  margin: 40px 0;
+  font-weight: 600;
   text-align: center;
+  color: #2e3131;
 }
 
 
-
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  place-content: center;
+  justify-content: center;
+  column-gap: 35px;
+}
  
-
-
-#produtos .produtos-title{
-  color:#1589FF;
-  font-family: 'Lato', sans-serif;
-  font-weight: bolder;
-  margin: 1.5rem 0;
+.grid-uso-industrial{
+  grid-template-columns: repeat(1,1fr);
 }
 
-
-
-
-#bem-estar .produtos-title{
-  color:rgb(190, 66, 66);
-  font-family: 'Lato', sans-serif;
-  font-weight: bolder;
-  margin: 1.5rem 0;
+.grid-uso-industrial .responsive{
+  max-width: 360px;
+  height: 340px;
 }
-
-
 
 
 .responsive{
-  padding: 0 50px;
-  float:left;
-  width: 33%;
+  width: 100%;
+  align-self: center;
+  justify-self: center;
 }
 
 
-#bem-estar .responsive{
-  width: 50%;
-}
 
 .gallery img:hover , .gallery img:active{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -550,20 +548,23 @@ section.dark .section-title::after{
   font-weight: lighter;
 }
 
-.gallery img{
-  width:100%;
-  height: auto;
-}
 
 .work{
-  display: block;
-  height: auto;
+  height: 300px;
   margin: 50px 0;
+  width: 100%;
 }
 
-.bem-estar-works{
-  margin-bottom: 450px;
+.gallery img{
+  width: 100%;
+  height:auto;
 }
+
+
+
+/** contactos */
+
+
 
 
 .grid{
@@ -793,22 +794,33 @@ footer .sm a:hover{
     text-align: center;
   }
 
-  .service{
-    width: calc(50% - 20px);
+  
+  /* TODO mudar */
+
+  
+  .responsive{
+    width:100%;
+    margin: 20px 0;
+    padding: 0;
   }
 
-  .block{
-    width: calc(100% - 20px);
-    margin-left: auto;
+
+
+  .produtos-title{
+    margin-top: 0;
+  }
+    
+
+  
+
+  .grid-container{
+    grid-template-columns: repeat(2,1fr);
   }
 
-  .work{
-    width: 100%;;
+  .grid-uso-industrial{
+    grid-template-columns: repeat(1,1fr);
   }
-
-  #bem-estar .work{
-    width: 100%;
-  }
+  
 
 
   .contact-info .item{
@@ -816,66 +828,18 @@ footer .sm a:hover{
     margin: 10px 0;
   }
 
-  .produtos-title{
-    margin-top: 0;
-  }
 
 
-  
-
-  #contact{
-    margin-top: 200px;
-  }
-
-  .responsive{
-    width:100%;
-    margin: 20px 0;
-    padding: 0;
-  }
-
-  #bem-estar  .responsive{
-    width:100%;
-    margin: 20px 0;
-    padding: 0;
-  }
-
-  .work{
-    align-content: center;
-  }
-
-  .gallery {
-    display: flex;
-    align-content: center;
-    align-self: center;
-    align-items: center;
-  }
 
 
-  .gallery img {
-    width: 80%;
-    margin: 0 auto;
-
-  }
-
- 
 
 }
-
-.vertical-center{
-  display: table-cell;
-  vertical-align: middle;
-}
-
 
 
 @media screen and (max-width: 680px){
   
   .logo-pic{
     margin-left:10%;
-  }
-
-  .gallery {
-    display: block;
   }
 
   .sm a{
@@ -914,77 +878,33 @@ footer .sm a:hover{
   .contact-info {
   padding-top: 0px ;
   padding-bottom: 20px;
+  }
 
-}
+
   
-#map{
-  height: 400px;
- }
-
-.home{
-    background-position:center;
-}
- 
-
-.responsive{
-  width:100%;
-}
-
-#bem-estar .responsive{
-  margin: 6px 0;
-  padding: 0;
-  width: 100%;
-} 
-
-.gallery img {
-  width: 100%;
-  min-height: 30vh;
-  margin: 0 auto;
-}
-
-  #bem-estar .responsive img{
-    height: 200px;
-    width:100%;
-    
+  #map{
+    height: 400px;
   }
+
+  .home{
+      background-position:center;
+  }
+
+  /* TODO MUDAR AQUI */
+
+  .gallery {
+    display: block;
+  }
+
+  
+
+  
+.grid-container{
+  grid-template-columns: repeat(1,1fr);
+}
 
  
 
 
 }
 
-.lds-ring {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.lds-ring div {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border: 8px solid #fff;
-  border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #fff transparent transparent transparent;
-}
-.lds-ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-.lds-ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-.lds-ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
