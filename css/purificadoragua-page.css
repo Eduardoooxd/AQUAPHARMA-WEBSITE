@@ -22,18 +22,16 @@
   color: #fff;
 }
 
-.home-content h2{
+.home-content h2,.home-content h3 {
   font-family: 'Barlow', sans-serif;
-  color: rgb(20, 19, 19);
+  color: #f1f1f1;
   margin: 25px 20px;
   font-size: 50px;
   font-weight: 100;
 }
 
 .home-content h3{
-  font-family: 'Barlow', sans-serif;
   margin: 50px 20px;
-  color: rgb(43, 40, 40);
   font-weight:100;
   font-size: 32px;
 }
