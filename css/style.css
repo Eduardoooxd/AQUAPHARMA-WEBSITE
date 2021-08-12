@@ -26,36 +26,56 @@ html{
   background-color: var(--light-blue);
 }
 
-.no-js #loader { display: none;  }
-.js #loader { display: block; position: absolute; left: 100px; top: 0; }
-.se-pre-con {
-	position: fixed;
-	left: 0px;
+.no-js #center { display: none;  }
+.js #center { display: block; position: absolute; left: 100px; top: 0; }
+
+
+.center{
+  position: fixed;
+  left: 0px;
 	top: 0px;
 	width: 100%;
 	height: 100%;
-	z-index: 9999;
+  z-index: 9999;
   background:center no-repeat #fff;
   display: flex;
-  align-items: center;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-
-.se-pre-con .loader{
-  border: 2px solid #f3f3f3; /* Light grey */
-  border-top: 2px solid var(--light-blue); /* Blue */
+.ring{
+  position: absolute;
+  width: 380px;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 1.5s linear infinite;
-  margin: 0 auto;
+  height: 380px;
+  animation: ring 2s linear infinite;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+@keyframes  ring {
+  0%{
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px var(--light-blue);
+  }
+  50%{
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px var(--light-blue);
+  }
+  100%{
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px var(--light-blue);
+  }
+}
+
+.ring::before{
+  position: absolute;
+  content: '';
+  left: 0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
 }
 
 
