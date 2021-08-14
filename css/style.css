@@ -52,6 +52,20 @@ html{
   animation: ring 2s linear infinite;
 }
 
+@media screen and (max-width: 680px){
+  .ring{
+    width: 300px;
+    height: 300px;
+  }
+
+  .center img{
+    width: 280px;
+  }
+
+}
+
+
+
 @keyframes  ring {
   0%{
     transform: rotate(0deg);
@@ -160,12 +174,14 @@ html{
   background-color: var(--dark-cinza);
 }
 
+
+
+
 .home{
   height: 100vh;
   min-height: 500px;
-  
   background-color: rgba(0, 0, 0, 0.4);
-  background-image: url("../images/fundo-4.jpg")  ;
+  background-image: url("../images/fundo-4-dark.jpg")  ;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
