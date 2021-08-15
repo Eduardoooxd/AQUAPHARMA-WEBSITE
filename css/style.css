@@ -6,7 +6,9 @@
   text-decoration: none;
   font-family: "Ubuntu",sans-serif;
   box-sizing: border-box;
+  overflow-x: hidden; 
 }
+
 
 
 html{
@@ -101,7 +103,11 @@ html{
   top: 0;
   z-index: 999;
   transition: .3s linear;
+  overflow-x: hidden;
 }
+
+
+
 
 .inner-width{
   max-width: 1300px;
@@ -175,13 +181,213 @@ html{
 }
 
 
+.banner1,
+.banner2,.banner3,
+.banner4{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  overflow: hidden;
+  animation: zoom-out 6s linear infinite;
+}
+
+.landing-page img{
+  width: 120%;
+  min-height: 100vh;
+  position: absolute;
+  object-fit: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  animation: zoom-out 6s linear infinite;
+}
+
+@media screen and (max-width: 1024px){
+  .landing-page img{
+    width: 200%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .landing-page img{
+    width: 300%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .landing-page img{
+    width: 400%;
+  }
+}
+
+
+@keyframes zoom-out {
+  100%{
+    width: 100%;
+  }
+}
+
+
+.banner1{
+  animation: slide1 24s linear infinite;
+}
+
+@keyframes slide1 {
+  0%{
+    visibility: visible;
+  }
+  25%{
+    visibility: hidden;
+  }
+  50%{
+    visibility: hidden;
+  }
+  75%{
+    visibility: hidden;
+  }
+  100%{
+    visibility: visible;
+  }
+}
+
+
+.banner2{
+  animation: slide2 24s linear infinite;
+}
+
+@keyframes slide2 {
+  0%{
+    visibility: hidden;
+  }
+  25%{
+    visibility: hidden;
+  }
+  50%{
+    visibility: visible;
+  }
+  75%{
+    visibility: hidden;
+  }
+  100%{
+    visibility: hidden;
+  }
+}
+
+
+.banner3{
+  animation: slide3 24s linear infinite;
+}
+
+
+@keyframes slide3 {
+  0%{
+    visibility: hidden;
+  }
+  25%{
+    visibility: hidden;
+  }
+  50%{
+    visibility: hidden;
+  }
+  75%{
+    visibility: visible;
+  }
+  100%{
+    visibility: hidden;
+  }
+}
+.banner4{
+  animation: slide4 24s linear infinite;
+}
+
+
+@keyframes slide4 {
+  0%{
+    visibility: hidden;
+  }
+  25%{
+    visibility: hidden;
+  }
+  50%{
+    visibility: hidden
+  }
+  75%{
+    visibility: hidden;
+  }
+  100%{
+    visibility: visible;
+  }
+}
+
+
+.text-box{
+  width: 600px;
+  height: min-content;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) translateY(100px);
+  
+  text-align: center;
+  color: #fff;
+  animation: textup 24s linear infinite;
+}
+
+@keyframes textup{
+  10%{
+    transform: translate(-50%, -50%);
+  }
+  100%{
+    transform: translate(-50%, -50%);
+  }
+}
+
+.text-box1{
+  animation-delay: 0s;
+}
+
+.text-box2{
+  animation-delay: 6s;
+}
+
+.text-box3{
+  animation-delay: 12s;
+}
+.text-box4{
+  animation-delay: 18s;
+}
+
+
+@media screen and (max-width: 680px){
+  .text-box{
+    width: 100%;
+  }
+}
+
+.text-box > *{
+  overflow:hidden;
+}
+
+.text-box > h1{
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  margin: 0.8rem;
+}
+
+.text-box > p{
+  font-size: 1.1rem;
+  margin: 0.6rem;
+  line-height: 1.4rem;
+}
 
 
 .home{
   height: 100vh;
   min-height: 500px;
   background-color: rgba(0, 0, 0, 0.4);
-  background-image: url("../images/fundo-4-dark.jpg")  ;
+  background-image: url("../images/fundo-4.jpg")  ;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -275,6 +481,11 @@ font-weight: lighter;
   width: 100%;
   border: solid rgb(219, 219, 219) 1px;
 }
+
+.home-separator{
+  margin-top:100vh ;
+}
+
 
 .item-a { width:200px; }
 .item-b { width:340px; }
@@ -875,7 +1086,10 @@ footer .sm a:hover{
 @media screen and (max-width: 680px){
   
   .logo-pic{
-    margin-left:10%;
+    margin: 0;
+    padding: 0;
+    
+    
   }
 
   .sm a{
