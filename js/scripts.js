@@ -1,11 +1,13 @@
 
-
- 
+window.onload = function() {
+  $(".center").fadeOut("slow");;
+};
+ /** 
 $(document).ready(function() {
   // Animate loader off screen
   $(".center").fadeOut("slow");;
 });
-
+*/
 
 
  $('.navbar-menu a').on('click', function (e) {

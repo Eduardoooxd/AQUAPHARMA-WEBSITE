@@ -42,6 +42,14 @@
         min-height: 1350px;
     }
     
+    .logo-link{
+        margin: 0;
+        width: 280px;
+      }
+      
+      .logo-pic{
+        width: 70%;
+      }
 
 
 } 

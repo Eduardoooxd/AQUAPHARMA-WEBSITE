@@ -425,6 +425,15 @@ footer .sm a:hover{
 }
   
 @media screen and (max-width: 680px){    
+
+  .logo-link{
+    margin: 0;
+    width: 280px;
+  }
+  
+  .logo-pic{
+    width: 70%;
+  }
     
     .home-content h2{
       
