@@ -466,7 +466,7 @@ section{
 }
 
 .section-title{
-  font-family: 'Lato', sans-serif;
+  
 font-weight: lighter;
   text-align: center;
   margin-bottom: 40px;
@@ -474,8 +474,6 @@ font-weight: lighter;
   font-size: 32px;
   padding-bottom: 20px;
   color: #111;
-  text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
-    0px -4px 10px rgba(255,255,255,0.3);
 }
 
 .content-separator{
@@ -735,7 +733,7 @@ section.dark .section-title::after{
 
 .section-title{
   font-size: 32px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: lighter;
 }
 
@@ -747,9 +745,9 @@ section.dark .section-title::after{
 
 .produtos-title{
   font-family: 'Poppins', sans-serif;
-  font-size: 30px;
+  font-size: 22px;
   margin: 40px 0;
-  font-weight: 600;
+  font-weight: lighter;
   text-align: center;
   color: #2e3131;
 }
