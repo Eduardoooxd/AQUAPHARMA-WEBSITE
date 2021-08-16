@@ -329,12 +329,19 @@ html{
   position: absolute;
   top:50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%) translateY(100px);
+  transform: translateX(-50%) translateY(-50%);
   
   text-align: center;
   color: #fff;
-  animation: textup 24s linear infinite;
+  
 }
+
+
+.text-box:nth-of-type(1){
+  transform: translateX(-50%) translateY(-50%) translateY(100px);
+  animation: textup 24s linear 1 forwards;
+}
+
 
 @keyframes textup{
   10%{
